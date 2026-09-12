@@ -34,7 +34,6 @@ An end-to-end Data Science and Machine Learning research investigation exploring
 - [Model Evaluation & Benchmark](#-model-evaluation--benchmark)
 - [Key Insights & Domain Takeaways](#-key-insights--domain-takeaways)
 - [Repository Structure](#-repository-structure)
-- [How to Reproduce the Project](#-how-to-reproduce-the-project)
 - [Limitations & Ethical Considerations](#-limitations--ethical-considerations)
 - [License](#-license)
 
@@ -167,42 +166,6 @@ Introduction-to-Data-Science/
 ├── README.md                            # Comprehensive project documentation
 ```
 
----
-
-## 🚀 How to Reproduce the Project
-
-### Prerequisites
-
-Ensure you have **R (version $\ge 4.2.0$)** and **RStudio** installed on your system.
-
-### Step 1: Clone the Repository
-```bash
-git clone https://github.com/Numman297/Introduction-to-Data-Science.git
-cd Introduction-to-Data-Science
-```
-
-### Step 2: Install Required R Packages
-Launch R or RStudio and execute:
-```R
-packages <- c(
-  "tidyverse", "skimr", "moments", "ggcorrplot", 
-  "factoextra", "caret", "rpart", "rpart.plot", 
-  "randomForest", "knitr", "kableExtra", "rsample"
-)
-
-install.packages(packages, dependencies = TRUE)
-```
-
-### Step 3: Render / Knit the Report
-You can render the full report from the command line or via RStudio:
-
-- **Using R CLI:**
-```R
-rmarkdown::render("J05Final.Rmd", output_format = "html_document")
-```
-- **Using RStudio:** Open `J05Final.Rmd` and click the **"Knit"** button at the top of the editor.
-
-The generated `J05Final.html` will contain all rendered figures, cross-validation tables, decision tree diagrams, and PCA biplots.
 
 ---
 
