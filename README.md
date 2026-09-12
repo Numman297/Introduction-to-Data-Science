@@ -34,6 +34,7 @@ An end-to-end Data Science and Machine Learning research investigation exploring
 - [Model Evaluation & Benchmark](#-model-evaluation--benchmark)
 - [Key Insights & Domain Takeaways](#-key-insights--domain-takeaways)
 - [Repository Structure](#-repository-structure)
+- [Installation & How to Run](#-installation--how-to-run)
 - [Limitations & Ethical Considerations](#-limitations--ethical-considerations)
 - [License](#-license)
 
@@ -166,6 +167,57 @@ Introduction-to-Data-Science/
 ├── README.md                            # Comprehensive project documentation
 ```
 
+
+---
+
+## 💻 Installation & How to Run
+
+### 1. Prerequisites
+Ensure you have the following installed on your machine:
+- **R (version $\ge 4.2.0$)**: [Download R](https://cloud.r-project.org/)
+- **RStudio Desktop**: [Download RStudio](https://posit.co/download/rstudio-desktop/)
+
+### 2. Clone the Repository
+```bash
+git clone https://github.com/Numman297/Introduction-to-Data-Science.git
+cd Introduction-to-Data-Science
+```
+
+### 3. Install Required R Packages
+Launch R or RStudio and run the following code to install and load all required libraries:
+```R
+required_packages <- c(
+  "tidyverse",    # Data wrangling, tidying, and ggplot2 visualizations
+  "skimr",        # Data inspection and descriptive summaries
+  "moments",      # Skewness and kurtosis statistical calculations
+  "ggcorrplot",   # Correlation matrix visualizations
+  "factoextra",   # Principal Component Analysis (PCA) plots and biplots
+  "caret",        # Machine learning workflow, data splitting, and 10-fold CV
+  "rpart",        # CART Decision Tree modeling
+  "rpart.plot",   # Decision Tree structure plotting
+  "randomForest", # Random Forest ensemble modeling
+  "knitr",        # Dynamic report generation
+  "kableExtra",   # Styled publication tables
+  "rsample"       # Resampling infrastructure
+)
+
+for (pkg in required_packages) {
+  if (!require(pkg, character.only = TRUE)) {
+    install.packages(pkg, dependencies = TRUE)
+    library(pkg, character.only = TRUE)
+  }
+}
+```
+
+### 4. Render / Execute the Report
+To run all analyses, models, and generate the publication-ready HTML report:
+
+- **Using RStudio:** Open `J05Final.Rmd` and click the **"Knit"** button at the top of the editor.
+- **Using Terminal / Command Prompt:**
+```bash
+Rscript -e "rmarkdown::render('J05Final.Rmd', output_format = 'html_document')"
+```
+The rendered interactive report will be generated as `J05Final.html`.
 
 ---
 
